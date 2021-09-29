@@ -33,7 +33,7 @@ justify-content: space-between;
 padding: 0.5rem calc((100vw -1300px) /2);
 z-index: 100;
 position: relative;
-border-bottom: white solid 4px;
+
 `
 
 const NavLink = styled(Link)`

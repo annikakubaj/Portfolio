@@ -1,18 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from './Button'
-import Video from '../assets/videos/yellow.mp4'
+import Video from '../assets/videos/pink.mp4'
+import Typewriter from 'typewriter-effect'
 
 const Hero = () => {
     return (
         <HeroContainer>
             <HeroBg>
-                <VideoBg src = {Video} type="video/mp4" autoPlay loop muted playsInline />
+                <VideoBg src = {Video} type="video/mp4" autoPlay muted playsInline />
             </HeroBg>
             <HeroContent>
                 <HeroItems>
-                    <HeroH1>KUBAJ</HeroH1>
-                    <HeroP>Coding</HeroP>
+                    <HeroH1>
+                    <Typewriter
+                    onInit={(typewriter) => {
+                        typewriter
+                        .typeString("Annika Kubaj")
+                        .pauseFor(2000)
+                        .deleteAll()
+                        .typeString("Im a Frontend Developer")
+                        .start();
+                    }}/> </HeroH1>
+                    {/* <HeroH1>KUBAJ</HeroH1>
+                    <HeroP>Coding</HeroP> */}
                     <Button primary="true" big="true" round="true" to="/about">View more</Button>
                 </HeroItems>
             </HeroContent>
